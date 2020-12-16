@@ -19,15 +19,15 @@ fi
 ### Kubectl
 if [ ! -f $HOME/bin/kubectl ]; then
     curl -o $HOME/tmp/kubectl $KUBCTLVER
-    chmod +x ./kubectl
-    cp ./kubectl $HOME/bin/kubectl
+    chmod +x $HOME/tmp/kubectl
+    cp $HOME/tmp/kubectl $HOME/bin/kubectl
 fi
 
 ### IAM Authenticator
 if [ ! -f $HOME/bin/aws-iam-authenticator ]; then
     curl -o $HOME/tmp/aws-iam-authenticator $IAMAUTHVER
-    chmod +x ./aws-iam-authenticator
-    cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator
+    chmod +x $HOME/tmp/aws-iam-authenticator
+    cp $HOME/tmp/aws-iam-authenticator $HOME/bin/aws-iam-authenticator
 fi
 
 ### Tools
