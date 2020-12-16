@@ -35,4 +35,4 @@ sudo yum install -y bind-utils
 sudo cp ./config_files/.git-prompt.sh ~/
 sudo cp ./config_files/custom_bash_profile ~/.bash_profile
 
-source ~/.bash_profile
+source ~/.bashrc

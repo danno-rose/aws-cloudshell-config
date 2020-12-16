@@ -1,5 +1,5 @@
-# .bash_profile
-source ~/.git-prompt.sh
+# # .bash_profile
+# source ~/.git-prompt.sh
 
 
 # Get the aliases and functions
@@ -7,104 +7,104 @@ if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
 
-# User specific environment and startup programs
+# # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
 export PATH="$HOME/.tfenv/bin:$PATH"
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+# # enable color support of ls and also add handy aliases
+# if [ -x /usr/bin/dircolors ]; then
+#     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#     alias ls='ls --color=auto'
+#     #alias dir='dir --color=auto'
+#     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+#     alias grep='grep --color=auto'
+#     alias fgrep='fgrep --color=auto'
+#     alias egrep='egrep --color=auto'
+# fi
 
-### BASH PROMPT
-export PS1="\033[36m[\t] \033[33;1m[\w]\033[0m\$(__git_ps1)\n$"
+# ### BASH PROMPT
+# export PS1="\033[36m[\t] \033[33;1m[\w]\033[0m\$(__git_ps1)\n$"
 
-if [ -f ~/.git-prompt.sh ]; then
-  GIT_PS1_SHOWDIRTYSTATE=true
-  GIT_PS1_SHOWSTASHSTATE=true
-  GIT_PS1_SHOWUNTRACKEDFILES=true
-  GIT_PS1_SHOWUPSTREAM="auto"
-  GIT_PS1_HIDE_IF_PWD_IGNORED=true
-  GIT_PS1_SHOWCOLORHINTS=true
-  . ~/.git-prompt.sh
-fi
+# if [ -f ~/.git-prompt.sh ]; then
+#   GIT_PS1_SHOWDIRTYSTATE=true
+#   GIT_PS1_SHOWSTASHSTATE=true
+#   GIT_PS1_SHOWUNTRACKEDFILES=true
+#   GIT_PS1_SHOWUPSTREAM="auto"
+#   GIT_PS1_HIDE_IF_PWD_IGNORED=true
+#   GIT_PS1_SHOWCOLORHINTS=true
+#   . ~/.git-prompt.sh
+# fi
 
-#Make Bash append rather than overwrite the history on disk:
-shopt -s histappend
+# #Make Bash append rather than overwrite the history on disk:
+# shopt -s histappend
 
-#Whenever displaying the prompt, write the previous line to disk:
-PROMPT_COMMAND='history -a'
+# #Whenever displaying the prompt, write the previous line to disk:
+# PROMPT_COMMAND='history -a'
 
 
-#### borrowed
-alias cp='cp -iv'                           # Preferred 'cp' implementation
-alias mv='mv -iv'                           # Preferred 'mv' implementation
-alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
-alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
-alias less='less -FSRXc'                    # Preferred 'less' implementation
-cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
-alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
-alias ..='cd ../'                           # Go back 1 directory level
-alias ...='cd ../../'                       # Go back 2 directory levels
-alias .3='cd ../../../'                     # Go back 3 directory levels
-alias .4='cd ../../../../'                  # Go back 4 directory levels
-alias .5='cd ../../../../../'               # Go back 5 directory levels
-alias .6='cd ../../../../../../'            # Go back 6 directory levels
-alias edit='code'                           # edit:         Opens any file in code editor
-#alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
-alias ~="cd ~"                              # ~:            Go Home
-alias c='clear'                             # c:            Clear terminal display
-alias which='type -all'                     # which:        Find executables
-alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
-alias show_options='shopt'                  # Show_options: display bash options settings
-alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
-alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
-mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
-### Terraform
-alias tfp='terraform plan'
-alias tfa='terraform apply'
-alias tfaa='terraform apply --auto-approve'
-#   extract:  Extract most know archives with one command
-#   ---------------------------------------------------------
-    extract () {
-        if [ -f $1 ] ; then
-          case $1 in
-            *.tar.bz2)   tar xjf $1     ;;
-            *.tar.gz)    tar xzf $1     ;;
-            *.bz2)       bunzip2 $1     ;;
-            *.rar)       unrar e $1     ;;
-            *.gz)        gunzip $1      ;;
-            *.tar)       tar xf $1      ;;
-            *.tbz2)      tar xjf $1     ;;
-            *.tgz)       tar xzf $1     ;;
-            *.zip)       unzip $1       ;;
-            *.Z)         uncompress $1  ;;
-            *.7z)        7z x $1        ;;
-            *)     echo "'$1' cannot be extracted via extract()" ;;
-             esac
-         else
-             echo "'$1' is not a valid file"
-         fi
-    }
+# #### borrowed
+# alias cp='cp -iv'                           # Preferred 'cp' implementation
+# alias mv='mv -iv'                           # Preferred 'mv' implementation
+# alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+# alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+# alias less='less -FSRXc'                    # Preferred 'less' implementation
+# cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
+# alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
+# alias ..='cd ../'                           # Go back 1 directory level
+# alias ...='cd ../../'                       # Go back 2 directory levels
+# alias .3='cd ../../../'                     # Go back 3 directory levels
+# alias .4='cd ../../../../'                  # Go back 4 directory levels
+# alias .5='cd ../../../../../'               # Go back 5 directory levels
+# alias .6='cd ../../../../../../'            # Go back 6 directory levels
+# alias edit='code'                           # edit:         Opens any file in code editor
+# #alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
+# alias ~="cd ~"                              # ~:            Go Home
+# alias c='clear'                             # c:            Clear terminal display
+# alias which='type -all'                     # which:        Find executables
+# alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
+# alias show_options='shopt'                  # Show_options: display bash options settings
+# alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
+# alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
+# mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
+# ### Terraform
+# alias tfp='terraform plan'
+# alias tfa='terraform apply'
+# alias tfaa='terraform apply --auto-approve'
+# #   extract:  Extract most know archives with one command
+# #   ---------------------------------------------------------
+#     extract () {
+#         if [ -f $1 ] ; then
+#           case $1 in
+#             *.tar.bz2)   tar xjf $1     ;;
+#             *.tar.gz)    tar xzf $1     ;;
+#             *.bz2)       bunzip2 $1     ;;
+#             *.rar)       unrar e $1     ;;
+#             *.gz)        gunzip $1      ;;
+#             *.tar)       tar xf $1      ;;
+#             *.tbz2)      tar xjf $1     ;;
+#             *.tgz)       tar xzf $1     ;;
+#             *.zip)       unzip $1       ;;
+#             *.Z)         uncompress $1  ;;
+#             *.7z)        7z x $1        ;;
+#             *)     echo "'$1' cannot be extracted via extract()" ;;
+#              esac
+#          else
+#              echo "'$1' is not a valid file"
+#          fi
+#     }
 
-#  To create a ZIP archive of a folder
-zipf () { zip -r "$1".zip "$1" ; }          
+# #  To create a ZIP archive of a folder
+# zipf () { zip -r "$1".zip "$1" ; }          
 
-#   ---------------------------
-#   4.  SEARCHING
-#   ---------------------------
+# #   ---------------------------
+# #   4.  SEARCHING
+# #   ---------------------------
 
-alias qfind="find . -name "                 # qfind:    Quickly search for file
-ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
-ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
-ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
+# alias qfind="find . -name "                 # qfind:    Quickly search for file
+# ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
+# ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
+# ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
