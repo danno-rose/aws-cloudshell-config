@@ -36,8 +36,8 @@ sudo yum install -y -q bind-utils
 sudo yum install -y -q bash-completion
 
 ######## Copy files
-sudo cp ./config_files/.git-prompt.sh ~/
-sudo cp ./config_files/custom_bash_profile ~/.bash_profile
+sudo cp ./config/.git-prompt.sh ~/
+sudo cp ./config/custom_bash_profile ~/.bash_profile
 
 ######## Reload Shell
 source ~/.bash_profile
