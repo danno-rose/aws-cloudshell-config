@@ -14,18 +14,22 @@ tfenv install $TFVER
 tfenv use $TFVER
 
 ### Kubectl
-curl -o kubectl $KUBCTLVER
-chmod +x ./kubectl
-cp ./kubectl $HOME/bin/kubectl
+if [ ! -f $HOME/bin/kubectl ]; then
+    curl -o kubectl $KUBCTLVER
+    chmod +x ./kubectl
+    cp ./kubectl $HOME/bin/kubectl
+fi
 
 ### IAM Authenticator
-curl -o aws-iam-authenticator $IAMAUTHVER
-chmod +x ./aws-iam-authenticator
-cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator
+if [ ! -f $HOME/bin/aws-iam-authenticator ]; then
+    curl -o aws-iam-authenticator $IAMAUTHVER
+    chmod +x ./aws-iam-authenticator
+    cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator
+fi
 
 ### Nano
 sudo yum install -y nano
-sudo yum install -y bindutils
+sudo yum install -y bind-utils
 
 ######## Copy files
 sudo cp ./config_files/.git-prompt.sh ~/
