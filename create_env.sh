@@ -29,9 +29,10 @@ if [ ! -f $HOME/bin/aws-iam-authenticator ]; then
     cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator
 fi
 
-### Nano
+### Tools
 sudo yum install -y nano
 sudo yum install -y bind-utils
+sudo yum install -y bash-completion
 
 ######## Copy files
 sudo cp ./config_files/.git-prompt.sh ~/
