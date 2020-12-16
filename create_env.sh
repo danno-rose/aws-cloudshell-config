@@ -30,14 +30,13 @@ if [ ! -f $HOME/bin/aws-iam-authenticator ]; then
 fi
 
 ### Tools
-sudo yum install -y nano
-sudo yum install -y bind-utils
-sudo yum install -y bash-completion
+sudo yum install -y -q nano
+sudo yum install -y -q bind-utils
+sudo yum install -y -q bash-completion
 
 ######## Copy files
 sudo cp ./config_files/.git-prompt.sh ~/
 sudo cp ./config_files/custom_bash_profile ~/.bash_profile
-
 
 ######## Reload Shell
 source ~/.bash_profile
