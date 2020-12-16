@@ -13,6 +13,7 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 export PATH="$HOME/.tfenv/bin:$PATH"
 
+source /usr/share/bash-completion/bash_completion
 source <(kubectl completion bash)
 
 ### BASH PROMPT
