@@ -1,7 +1,6 @@
 # # .bash_profile
 source ~/.git-prompt.sh
 
-
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
@@ -13,6 +12,7 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
 export PATH="$HOME/.tfenv/bin:$PATH"
+source <(kubectl completion bash)
 
 ### BASH PROMPT
 export PS1="\033[36m[\t] \033[33;1m[\w]\033[0m\$(__git_ps1)\n$"
