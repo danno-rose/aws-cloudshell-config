@@ -5,6 +5,7 @@ IAMAUTHVER="https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/
 
 ## PRE CONFIG
 mkdir -p $HOME/bin
+mkdir -p $HOME/tmp
 
 ######## Installing tools
 ## TFENV
@@ -17,14 +18,14 @@ fi
 
 ### Kubectl
 if [ ! -f $HOME/bin/kubectl ]; then
-    curl -o kubectl $KUBCTLVER
+    curl -o $HOME/tmp/kubectl $KUBCTLVER
     chmod +x ./kubectl
     cp ./kubectl $HOME/bin/kubectl
 fi
 
 ### IAM Authenticator
 if [ ! -f $HOME/bin/aws-iam-authenticator ]; then
-    curl -o aws-iam-authenticator $IAMAUTHVER
+    curl -o $HOME/tmp/aws-iam-authenticator $IAMAUTHVER
     chmod +x ./aws-iam-authenticator
     cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator
 fi
