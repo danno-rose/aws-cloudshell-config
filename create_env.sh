@@ -27,7 +27,7 @@ cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator
 sudo yum install -y nano
 
 ######## Copy files
-sudo cp ./config_files/.git-prompt.sh ~/.git-prompt.sh
+sudo cp ./config_files/.git-prompt.sh ~/
 sudo cp ./config_files/custom_bash_profile ~/.bash_profile
 
 source ~/.bash_profile

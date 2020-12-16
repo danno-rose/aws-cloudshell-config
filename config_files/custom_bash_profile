@@ -45,9 +45,6 @@ shopt -s histappend
 #Whenever displaying the prompt, write the previous line to disk:
 PROMPT_COMMAND='history -a'
 
-##### Alias
-sdig () { dig "$1" +short ; } 
-
 #### borrowed
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
