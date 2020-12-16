@@ -25,6 +25,7 @@ cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator
 
 ### Nano
 sudo yum install -y nano
+sudo yum install -y bindutils
 
 ######## Copy files
 sudo cp ./config_files/.git-prompt.sh ~/
