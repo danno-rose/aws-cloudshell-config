@@ -1,5 +1,5 @@
 # # .bash_profile
-# source ~/.git-prompt.sh
+source ~/.git-prompt.sh
 
 
 # Get the aliases and functions
@@ -14,20 +14,8 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 export PATH="$HOME/.tfenv/bin:$PATH"
 
-# # enable color support of ls and also add handy aliases
-# if [ -x /usr/bin/dircolors ]; then
-#     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-#     alias ls='ls --color=auto'
-#     #alias dir='dir --color=auto'
-#     #alias vdir='vdir --color=auto'
-
-#     alias grep='grep --color=auto'
-#     alias fgrep='fgrep --color=auto'
-#     alias egrep='egrep --color=auto'
-# fi
-
-# ### BASH PROMPT
-# export PS1="\033[36m[\t] \033[33;1m[\w]\033[0m\$(__git_ps1)\n$"
+### BASH PROMPT
+export PS1="\033[36m[\t] \033[33;1m[\w]\033[0m\$(__git_ps1)\n$"
 
 # if [ -f ~/.git-prompt.sh ]; then
 #   GIT_PS1_SHOWDIRTYSTATE=true
