@@ -8,10 +8,12 @@ mkdir -p $HOME/bin
 
 ######## Installing tools
 ## TFENV
+if [ ! -f ~/.tfenv/bin/tfenv ]; then
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 sudo ln -s ~/.tfenv/bin/* /usr/local/bin
 tfenv install $TFVER
 tfenv use $TFVER
+fi
 
 ### Kubectl
 if [ ! -f $HOME/bin/kubectl ]; then
@@ -35,4 +37,6 @@ sudo yum install -y bind-utils
 sudo cp ./config_files/.git-prompt.sh ~/
 sudo cp ./config_files/custom_bash_profile ~/.bash_profile
 
+
+######## Reload Shell
 source ~/.bash_profile
