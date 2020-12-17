@@ -37,14 +37,16 @@ if [ ! -f $HOME/bin/aws-iam-authenticator ]; then
 fi
 
 ### Tools
-for tool in ${TOOLS[@]};
-    if command -v apt-get >/dev/null; then
+
+if command -v apt-get >/dev/null; then
+    for tool in ${TOOLS[@]};
         sudo apt-get -y install $tool
-        elif command -v yum >/dev/null; then
-            sudo yum install -y $tool 
-        else
-         echo "I have no Idea what im doing here"
-    fi
+    elif command -v yum >/dev/null; then
+        for tool in ${TOOLS[@]};
+        sudo yum install -y $tool 
+    else
+        echo "I have no Idea what im doing here"
+fi
 
 ######## Copy files
 sudo cp ./config/.git-prompt.sh ~/
