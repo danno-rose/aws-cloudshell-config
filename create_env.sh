@@ -36,12 +36,12 @@ fi
 
 if command -v apt-get >/dev/null; then
     for tool in $TOOLS;
-    sudo apt-get -y install $tool
+    sudo apt-get -y install ${tool}
 fi 
 
 if command -v yum >/dev/null; then
     for tool in $TOOLS;
-    sudo yum install -y $tool 
+    sudo yum install -y ${tool}
 fi
 
 ######## Copy files
