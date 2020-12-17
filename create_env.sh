@@ -42,7 +42,7 @@ if command -v apt-get >/dev/null; then
 fi 
 
 if command -v yum >/dev/null; then
-    for tool in $TOOLS;
+    for tool in ${TOOLS[@]};
     do
         sudo yum install -y $tool
     done
