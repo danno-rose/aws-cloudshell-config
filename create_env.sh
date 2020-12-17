@@ -40,10 +40,10 @@ fi
 
 if command -v apt-get >/dev/null; then
     for tool in ${TOOLS[@]};
-        sudo apt-get -y install $tool
+    sudo apt-get -y install $tool
     elif command -v yum >/dev/null; then
-        for tool in ${TOOLS[@]};
-        sudo yum install -y $tool 
+    for tool in ${TOOLS[@]};
+    sudo yum install -y $tool 
     else
         echo "I have no Idea what im doing here"
 fi
