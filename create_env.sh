@@ -45,7 +45,6 @@ for tool in ${TOOLS[@]};
         else
          echo "I have no Idea what im doing here"
     fi
-fi
 
 ######## Copy files
 sudo cp ./config/.git-prompt.sh ~/
