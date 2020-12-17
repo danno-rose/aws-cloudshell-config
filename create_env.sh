@@ -40,10 +40,11 @@ fi
 for tool in ${TOOLS[@]};
     if command -v apt-get >/dev/null; then
         sudo apt-get -y install $tool
-    elif command -v yum >/dev/null; then
-        sudo yum install -y $tool 
-    else
-        echo "I have no Idea what im doing here"
+        elif command -v yum >/dev/null; then
+            sudo yum install -y $tool 
+        else
+         echo "I have no Idea what im doing here"
+    fi
 fi
 
 ######## Copy files
