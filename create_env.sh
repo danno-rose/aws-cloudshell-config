@@ -34,15 +34,18 @@ fi
 
 ### Tools
 
-if [ -n "$(which apt-get)" ]; then
+if command -v apt-get >/dev/null; then
     for tool in $TOOLS;
-    sudo apt-get -y install ${tool}
+    do
+        sudo apt-get -y install $tool
+    done
 fi 
 
-if [ -n "$(which yum)" ]; then
+if command -v yum >/dev/null; then
     for tool in $TOOLS;
-    echo "gah"
-    sudo yum install -y $tool
+    do
+        sudo yum install -y $tool
+    done
 fi
 
 ######## Copy files
