@@ -6,8 +6,8 @@ IAMAUTHVER="https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/
 TOOLS=("nano" "bind-utils" "bash-completion")
 
 ## PRE CONFIG
-mkdir -p $HOME/bin
-mkdir -p $HOME/tmp
+sudo mkdir -p $HOME/bin
+sudo mkdir -p $HOME/tmp
 
 ######## Installing tools
 ## TFENV
