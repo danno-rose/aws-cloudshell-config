@@ -41,6 +41,7 @@ fi
 
 if command -v yum >/dev/null; then
     for tool in $TOOLS;
+    echo "gah"
     sudo yum install -y ${tool}
 fi
 
