@@ -3,11 +3,7 @@ TFVER="0.13.5"
 KUBCTLVER="https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl"
 IAMAUTHVER="https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/aws-iam-authenticator"
 
-TOOLS=(
-    "nano"
-    "bind-utils"
-    "bash-completion"
-)
+TOOLS=("nano" "bind-utils" "bash-completion")
 
 ## PRE CONFIG
 mkdir -p $HOME/bin
@@ -39,10 +35,10 @@ fi
 ### Tools
 
 if command -v apt-get >/dev/null; then
-for tool in ${TOOLS[@]};
+for tool in $TOOLS;
 sudo apt-get -y install $tool
 elif command -v yum >/dev/null; then
-for tool in ${TOOLS[@]};
+for tool in $TOOLS;
 sudo yum install -y $tool 
 else
         echo "I have no Idea what im doing here"
