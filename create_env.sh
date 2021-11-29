@@ -35,7 +35,7 @@ fi
 ### Tools
 
 if command -v apt-get >/dev/null; then
-    for tool in $TOOLS;
+    for tool in ${TOOLS[@]};
     do
         sudo apt-get -y install $tool
     done
