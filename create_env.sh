@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-TFVER="0.13.5"
+TFVER="0.14.11"
 KUBCTLVER="https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/kubectl"
 IAMAUTHVER="https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/linux/amd64/aws-iam-authenticator"
 
